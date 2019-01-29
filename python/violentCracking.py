@@ -1,13 +1,15 @@
-#[xa,ya]
-#[xb,yb]
-#[xc,yc]
+'''
+[xa,ya]
+[xb,yb]
+[xc,yc]
 
-#[m,n]
+[m,n]
 
-#da,db,dc
-#f1,f2,f3
+da,db,dc
+f1,f2,f3
 
-#F[m,n]=f1+f2+f3
+F[m,n]=f1+f2+f3
+'''
 
 
 ##Open the D01.xlsx##################################
@@ -23,7 +25,7 @@ import math
 max_num = 0.0
 
 
-workbook = xlrd.open_workbook(r"C:\2019IMMC\IMMC2019-ProblemD\D01.xlsx")
+workbook = xlrd.open_workbook(r"C:\IMMC2019ECIC\IMMC2019-ProblemD\D01.xlsx")
 sheet1_name = workbook.sheet_names()[0]
 
 sheet1 = workbook.sheet_by_index(0)
@@ -79,11 +81,13 @@ for x_a in range(0,100):
                                 if x_a == xc and y_a == yc:
                                     dc = 1
 
+                                '''
                                 #The Pollution Value in a particular distance(da/db/dc) between A/B/C and that anypoint
                                 #a/b/c means a coefficient for the unknown equation
-                                #fa = a/math.pow(da)
-                                #fb = b/math.pow(db)
-                                #fc = c/math.pow(dc)
+                                fa = a/math.pow(da)
+                                fb = b/math.pow(db)
+                                fc = c/math.pow(dc)
+                                '''
 
                                 right_list.append([round(1/math.pow(da,2),3),round(1/math.pow(db,2),3),round(1/math.pow(dc,2),3)])
                                 
